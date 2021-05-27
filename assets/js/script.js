@@ -125,7 +125,7 @@ function generatePassword(){
     
     //initialize temp variable for holding the round
     var temp = new Array();
-    for( var i = 0; i<=totalNumbers; i++){
+    for( var i = 0; i<totalNumbers; i++){
       
       //select random index from user fabricated indexCatagories
       randomCatagoryIndex();
@@ -169,7 +169,8 @@ function generatePassword(){
       }
            
     } 
-    password = temp; 
+    console.log(temp.join(''));
+    password = temp.join(''); 
     return(password);
     
     
