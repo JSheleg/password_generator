@@ -17,6 +17,8 @@
      3. Once all prompts have been run, the program will use randomness to choose both the catagory of acceptable character as well as a random character in that catagory. Once the program has chosen enough characters based on the requested user length, the new password will be displayed for the User.
 
 ### Passwords:
-![Password_8_Characters]
+![Password_8_Characters](https://github.com/JSheleg/password_generator/blob/main/assets/img/pass_8.JPG)
 
-![Password_129_Characters]
+![Password_129_Characters](https://github.com/JSheleg/password_generator/blob/main/assets/img/pass_129.JPG)
+
+
