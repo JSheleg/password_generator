@@ -22,3 +22,8 @@
 ![Password_129_Characters](https://github.com/JSheleg/password_generator/blob/main/assets/img/pass_129.JPG)
 
 
+### Links:
+
+Link to deployed code: https://jsheleg.github.io/password_generator/
+Link to password_generator repository: https://github.com/JSheleg/password_generator
+
