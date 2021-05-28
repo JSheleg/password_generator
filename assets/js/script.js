@@ -169,7 +169,7 @@ function generatePassword(){
       }
            
     } 
-    console.log(temp.join(''));
+    //console.log(temp.join(''));
     password = temp.join(''); 
     return(password);
     
