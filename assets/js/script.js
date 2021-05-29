@@ -55,11 +55,10 @@
   var randomSpecialCharIndex = function(){
     indexSpeicalCharCase = specialCharAlphabet[Math.floor(Math.random()*specialCharAlphabet.length)];
   }
-/////////////////////////////////////////////////Random Functions End//////////////////////////////////////////////////////////
+///////////////////////Random Functions End//////////////////////////////////////////////////////////
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
 
 
 // Write password to the #password input
@@ -73,7 +72,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-//// Generate Password Function////
+///////////////////////// Generate Password Function//////////////////////////////////////////////////////////
 
 function generatePassword(){
   var totalNumbers = window.prompt(' How many characters would you like for your password? Please choose between 8 and 129 characters!');
@@ -81,99 +80,53 @@ function generatePassword(){
     console.log("Total number requested for password " + totalNumbers);
 
     //prompts asked after button push and build catagories index
-    var lowerCase = window.confirm('Do you want to include lower case characters in your password?');
+    var lowerCase = window.confirm('Do you want to include LOWER CASE characters in your password?');
     if(lowerCase){
-      alert("you have chosen lowercase");
-
-      //need to add 0 to indexCatagories
       indexCatagories.push('0');
-      console.log(indexCatagories);
     }
-    else{
-      alert("No lowercase for you");
-    }
-    var upperCase = window.confirm('Do you want to include upper case characters in your password?');
+    var upperCase = window.confirm('Do you want to include UPPER CASE characters in your password?');
     if(upperCase){
       indexCatagories.push('1');
-      console.log(indexCatagories);
     }
-    else{
-      alert("No uppercase for you");
-    }
-
-    var numericCase = window.confirm('Do you want to include number characters in your password?');
+    var numericCase = window.confirm('Do you want to include NUMBER characters in your password?');
     if(numericCase){
       indexCatagories.push('2');
-      console.log(indexCatagories);
-    }
-    else{
-      alert('No numbers for you');
-    }
-
-    var specialCharacters = window.confirm('Do you want to include special characters in your password?');
+    }  
+    var specialCharacters = window.confirm('Do you want to include SPECIAL characters in your password?');
     if(specialCharacters){
       indexCatagories.push('3');
-      console.log(indexCatagories);
     }
-    else{
-      alert("no special characters for you");
-    }
-
-    console.log(indexCatagories);
-
     ///////Index Array should be intialized, loop through number of variables stated by user using randomCatagoryIndex()//////////////
     
     //initialize temp variable for holding the round
     var temp = new Array();
+
+    //loop to generate variable for each index of password.
     for( var i = 0; i<totalNumbers; i++){
       
       //select random index from user fabricated indexCatagories
       randomCatagoryIndex();
-      console.log("Catagory Index is: " + index);
-      console.log(temp);
-
-      //pull random character based off the index
+ 
       //if index = 0 (lowercase)
       if(index === "0"){
-        alert("hello index 0");
         randomLowerCaseIndex();
         temp.push(indexLowerCase);
-        console.log("LowerCase index is: " + indexLowerCase);
       }
-      //if index = 1(uppercase)
       else if(index === "1"){
-        alert("hello index 1");
         randomUpperCaseIndex();
-        temp.push(indexUpperCase);
-        console.log("UpperCase index is: " + indexUpperCase);
-        
+        temp.push(indexUpperCase);  
       }
-      //if index = 2(numbers)
       else if(index === "2"){
-        alert("hello index 2");
         randomNumberIndex();
         temp.push(indexNumberCase);
-        console.log("NumberCase index is: " + indexNumberCase);
-
       }
-      //if index =3(special characters)
       else if(index === "3"){
-        alert("hello index 3");
         randomSpecialCharIndex();
         temp.push(indexSpeicalCharCase);
-        console.log("SpecialChar index is: "+ indexSpeicalCharCase);
-      }
-      //safety check
-      else{
-        alert("if conditionals not working");
-      }
-           
+      }           
     } 
-    //console.log(temp.join(''));
     password = temp.join(''); 
     return(password);
-    
-    
   }
   else{
     window.alert("Input was out of range or was not a number, please try again");

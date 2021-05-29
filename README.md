@@ -24,6 +24,6 @@
 
 ### Links:
 
-Link to deployed code: https://jsheleg.github.io/password_generator/
-Link to password_generator repository: https://github.com/JSheleg/password_generator
+* Link to deployed code: https://jsheleg.github.io/password_generator/
+* Link to password_generator repository: https://github.com/JSheleg/password_generator
 
